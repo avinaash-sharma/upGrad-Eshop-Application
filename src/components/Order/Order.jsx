@@ -18,6 +18,7 @@ export default function Order() {
     const products = JSON.parse(localStorage.getItem('products'));
     const [address, setAddress] = useState({firstName: '', lastName: '', contactNumber: '', street: '', city: '', state: '', landmark: '', zip: ''});
     const [activeStep, setActiveStep] = useState(0);
+    console.log("🚀 ~ file: Order.jsx:21 ~ Order ~ activeStep:", activeStep)
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -45,6 +46,7 @@ export default function Order() {
             document.getElementById("addressForm").dispatchEvent(event);
             return;
         } else if(activeStep === steps.length - 1) {
+            console.log("True");
             const newProducts = [...products];
             const index = newProducts.indexOf(product)
             newProducts[index].quantity = newProducts[index].quantity - quantity;
@@ -67,9 +69,13 @@ export default function Order() {
             case 0:
                 return <ItemDetails />
             case 1:
+                // return <OrderSummary address={address} product={product} quantity={quantity} />
+
                 return <AddressDetails setAddressCallBack={setAddressCallBack} addressDetails={address}/>
             case 2:
                 return <OrderSummary address={address} product={product} quantity={quantity} />
+            default :
+                return <NoMatch />
         }
     }
     
