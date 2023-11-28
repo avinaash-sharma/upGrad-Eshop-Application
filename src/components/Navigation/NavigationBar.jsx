@@ -18,7 +18,7 @@ const Logo = () => {
     <React.Fragment>
       <ShoppingCart />
       <Typography variant="h6" padding={1} noWrap component="div" sx={{ display: { xs: 'none', sm: 'block' } }}>
-        upGrad E-Shop
+        Avinash E-Shop
       </Typography>
     </React.Fragment>
   )
@@ -113,16 +113,16 @@ export default function NavigationBar() {
   const isLoggedIn = Object.keys(user).length !== 0;
   const isAdmin = isLoggedIn && user.isAdmin;
   const dispatch = useDispatch();
-  if(localStorage.getItem('admin@upgrad.com') === null) {
+  if(localStorage.getItem('admin@avinash.com') === null) {
     const adminDetails = {
       contactNumber: "+91887709962",
-      email: "admin@upgrad.com",
+      email: "admin@avinash.com",
       firstName: "Avinash",
       isAdmin: true,
       lastName: "Sharma",
       password: "Admin@123"
     };
-    localStorage.setItem('admin@upgrad.com', JSON.stringify(adminDetails));
+    localStorage.setItem('admin@avinash.com', JSON.stringify(adminDetails));
   }
   return (
     <React.Fragment>

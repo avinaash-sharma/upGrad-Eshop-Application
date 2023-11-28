@@ -111,7 +111,7 @@ export default function Content() {
     FilterProducts(products, setDisplayProducts);
     if (!isLoggedIn) {
         return (
-            <div className="center fill">Welcome to Upgrad E-Shop,<br />Your one stop shop for everything you need.</div>
+            <div className="center fill">Welcome to Avinash E-Shop,<br />Your one stop shop for everything you need.</div>
         );
     }
     const [vertical, horizontal] = ['top', 'right'];
