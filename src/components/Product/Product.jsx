@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Fab, IconButton, Typography } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, IconButton, Typography } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Fragment, useState } from "react";
@@ -60,6 +60,7 @@ const AdminMenu = ({isAdmin, product}) => {
 }
 
 export default function Product({productDetails, isAdmin}) {
+    // eslint-disable-next-line no-unused-vars
     const [product, setProduct] = useState(productDetails);
     const navigate = useNavigate();
     return (

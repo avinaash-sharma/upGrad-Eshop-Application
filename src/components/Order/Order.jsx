@@ -1,4 +1,4 @@
-import { Button, CardMedia, Step, StepLabel, Stepper, Typography } from "@mui/material";
+import { Button, CardMedia, Step, StepLabel, Stepper } from "@mui/material";
 import { Box } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -35,7 +35,7 @@ export default function Order() {
     if(!searchParams.get('productId')) {
         return <NoMatch />
     }
-    const product = products.find(ele => ele.key == productId);
+    const product = products.find(ele => ele.key === productId);
 
     const handleNext = () => {
         if(activeStep === 1) {

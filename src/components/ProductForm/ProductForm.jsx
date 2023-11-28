@@ -2,6 +2,7 @@ import { Button, CssBaseline, Grid, MenuItem, TextField, Typography } from "@mui
 import { Box, Container } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+// eslint-disable-next-line no-unused-vars
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import NoMatch from "../404Handling/NoMatch";
 import { InitialProducts } from "../../common/InitialProducts";
@@ -20,7 +21,7 @@ export default function ProductForm() {
 
   let { productId } = useParams();
   const products = JSON.parse(localStorage.getItem('products'));
-  const productInfo = products.find(ele => ele.key == productId);
+  const productInfo = products.find(ele => ele.key === productId);
   const location = useLocation();
   const[product, setProduct] = useState((location.pathname.indexOf('/modifyproduct') !== -1) ? productInfo : emptyProduct);
   

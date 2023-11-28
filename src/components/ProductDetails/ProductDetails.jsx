@@ -11,7 +11,7 @@ export default function ProductDetails() {
     console.log("🚀 ~ file: ProductDetails.jsx:11 ~ ProductDetails ~ productId:", productId)
     const products = JSON.parse(localStorage.getItem('products'));
     console.log("🚀 ~ file: ProductDetails.jsx:13 ~ ProductDetails ~ products:", products)
-    const product = products?.find(element => element.key == productId);
+    const product = products?.find(element => element.key === productId);
     console.log("🚀 ~ file: ProductDetails.jsx:14 ~ ProductDetails ~ product:", product)
     const [productQuantity, setProductQuantity] = useState(1);
     const [error, setError] = useState('');

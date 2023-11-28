@@ -30,6 +30,7 @@ const FilterProducts = (products, setDisplayProducts) => {
             newDisplayProducts.sort(function (a, b) { return new Date(a.modifiedDate) > new Date(b.modifiedDate) });
         }
         setDisplayProducts(newDisplayProducts);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [displaySetting]);
 }
 
