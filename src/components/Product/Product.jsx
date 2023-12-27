@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const AdminMenu = ({isAdmin, product}) => {
+    console.log("🚀 ~ file: Product.jsx:9 ~ AdminMenu ~ product:", product)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const handleDeleteMessageClose = (e) => {

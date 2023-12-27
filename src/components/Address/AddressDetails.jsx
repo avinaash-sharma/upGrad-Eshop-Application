@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import { Box, Button, Container, Grid, MenuItem, TextField, Typography } from "@mui/material";
 import { Fragment, useState } from "react";
 import { useSelector } from "react-redux";
@@ -65,6 +66,8 @@ export default function AddressDetails({setAddressCallBack, addressDetails}) {
                         error = 'Please enter a proper contact number'
                     }
                 break;
+                default :
+                console.error('Invalid contact');
             }
         }
         if(error === '') {

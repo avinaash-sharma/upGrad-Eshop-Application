@@ -35,7 +35,7 @@ export default function Order() {
     if(!searchParams.get('productId')) {
         return <NoMatch />
     }
-    const product = products.find(ele => ele.key === productId);
+    const product = products.find(ele => ele.key == productId);
 
     const handleNext = () => {
         if(activeStep === 1) {
