@@ -136,7 +136,7 @@ export default function Login(){
                   autoFocus
                   onChange={validateComponent}
                   error={errors.hasOwnProperty('email')}
-                  helperText={errors.email}
+                  helperText={errors.email ? "demo data email - admin@avinash.com" : errors.email}
                 />
                 <TextField
                   margin="normal"
@@ -149,7 +149,7 @@ export default function Login(){
                   autoComplete="current-password"
                   onChange={validateComponent}
                   error={errors.hasOwnProperty('password')}
-                  helperText={errors.password}
+                  helperText={errors.password ? "demo data email - Admin@123" : errors.password}
                 />
                 <FormControlLabel
                   control={<Checkbox value="remember" color="primary" />}
@@ -170,6 +170,8 @@ export default function Login(){
                     </Link>
                   </Grid>
                 </Grid>
+               
+                
               </Box>
             </Box>
             <Copyright sx={{ mt: 8, mb: 4 }} />
